@@ -195,7 +195,7 @@ def run_gnn_inference(X_tfidf: np.ndarray, model, edge_index):
     return preds, probs
 
 def visualize_pyvis(nodes_df: pd.DataFrame, edges: List[Tuple[int,int]], score_col: str = "spam_score"):
-    net = Network(height="600px", width="100%", notebook=False)
+    net = Network(height="600px", width="100%", notebook=True)
     net.toggle_physics(True)
     # add nodes with size by spam score
     for idx, row in nodes_df.iterrows():
@@ -206,10 +206,8 @@ def visualize_pyvis(nodes_df: pd.DataFrame, edges: List[Tuple[int,int]], score_c
         net.add_node(int(idx), label=label, title=title, size=size, color=color)
     for u,v in edges:
         net.add_edge(int(u), int(v))
-    # save to temporary html and return html
-    tmpfile = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
-    net.show(tmpfile.name)
-    html = open(tmpfile.name, "r", encoding="utf-8").read()
+    # return html without using .show() (incompatible with Streamlit Cloud)
+    html = net.get_html()
     return html
 
 # ----------------------------
