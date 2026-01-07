@@ -48,7 +48,17 @@ from torch_geometric.nn import GCNConv
 # ----------------------------
 # Config / paths
 # ----------------------------
-PROJECT_PATH_DEFAULT = "/content/drive/MyDrive/youtube_spam_detector"
+# Auto-detect environment: Streamlit Cloud vs Colab
+import os
+from pathlib import Path
+
+if os.path.exists("/content/drive/MyDrive/youtube_spam_detector"):
+    # Running in Google Colab
+    PROJECT_PATH = "/content/drive/MyDrive/youtube_spam_detector"
+else:
+    # Running in Streamlit Cloud or local - use current directory
+    PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+
 TFIDF_FILENAME = "tfidf_vectorizer.pkl"
 GRAPH_PICKLE = "graph_structure.pkl"   # optional: not required for single-video run
 MODEL_FILENAME = "gnn_spam_model.pt"
