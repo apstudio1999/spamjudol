@@ -206,8 +206,9 @@ def visualize_pyvis(nodes_df: pd.DataFrame, edges: List[Tuple[int,int]], score_c
         net.add_node(int(idx), label=label, title=title, size=size, color=color)
     for u,v in edges:
         net.add_edge(int(u), int(v))
-    # return html without using .show() (incompatible with Streamlit Cloud)
-    html = net.get_html()
+    # generate html and return
+    net.generate_html()
+    html = net.html
     return html
 
 # ----------------------------
