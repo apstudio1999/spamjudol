@@ -1,0 +1,205 @@
+🎬 YOUTUBE SPAM DETECTOR - API VERSION
+═════════════════════════════════════════════════════════════════════════════
+
+Ini adalah versi dengan YouTube API integration yang memungkinkan:
+  ✓ Fetch comments langsung dari YouTube video
+  ✓ Otomatis prediksi spam pada comments
+  ✓ Batch upload CSV untuk prediksi
+  ✓ Statistics & visualization
+
+═════════════════════════════════════════════════════════════════════════════
+
+🚀 CARA MENGGUNAKAN
+═════════════════════════════════════════════════════════════════════════════
+
+CARA 1: JALANKAN APP
+  1. Double-click: run_streamlit.bat
+     OR: python -m streamlit run streamlit_app_youtube.py
+     
+  2. Browser terbuka di: http://localhost:8501
+
+CARA 2: SETTING YOUTUBE API KEY
+  Pilih salah satu:
+  
+  OPSI A: Environment Variable (Recommended!)
+    • Windows: Set YOUTUBE_API_KEY=AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A
+    • Atau edit: .env file dengan API key Anda
+    
+  OPSI B: Langsung di UI
+    • Di app sidebar, ada input field untuk API key
+    • Paste API key Anda
+    • Click "Set API Key"
+
+═════════════════════════════════════════════════════════════════════════════
+
+📝 FEATURES
+═════════════════════════════════════════════════════════════════════════════
+
+MODE 1: FETCH FROM YOUTUBE
+  1. Pilih Mode: "🎬 Fetch YouTube Comments"
+  2. Paste URL: https://www.youtube.com/watch?v=VIDEO_ID
+  3. Masukkan jumlah comments (1-1000)
+  4. Click "🔍 Fetch Comments"
+  5. Lihat comments dengan predictions
+
+MODE 2: BATCH UPLOAD
+  1. Pilih Mode: "📊 Batch Upload"
+  2. Upload CSV dengan kolom: comment_text, text, content, atau comment
+  3. Click "🔍 Predict All"
+  4. Download results.csv
+
+MODE 3: STATISTICS
+  1. Pilih Mode: "📈 Statistics"
+  2. Lihat model info, performance metrics
+  3. Lihat confusion matrix & baseline comparison
+
+═════════════════════════════════════════════════════════════════════════════
+
+⚙️ API KEY SETUP
+═════════════════════════════════════════════════════════════════════════════
+
+API Key Anda:
+  AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A
+
+SETTING VIA ENVIRONMENT VARIABLE:
+
+Windows PowerShell:
+  $env:YOUTUBE_API_KEY = "AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A"
+  python -m streamlit run streamlit_app_youtube.py
+
+Windows Command Prompt:
+  set YOUTUBE_API_KEY=AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A
+  python -m streamlit run streamlit_app_youtube.py
+
+Linux/Mac:
+  export YOUTUBE_API_KEY="AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A"
+  python -m streamlit run streamlit_app_youtube.py
+
+═════════════════════════════════════════════════════════════════════════════
+
+🔗 CARA MENDAPATKAN YOUTUBE VIDEO ID
+═════════════════════════════════════════════════════════════════════════════
+
+URL Format:
+  https://www.youtube.com/watch?v=VIDEO_ID
+
+Contoh:
+  https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  VIDEO_ID = dQw4w9WgXcQ
+
+ATAU Short URL:
+  https://youtu.be/dQw4w9WgXcQ
+  VIDEO_ID = dQw4w9WgXcQ
+
+═════════════════════════════════════════════════════════════════════════════
+
+📊 OUTPUT / PREDICTIONS
+═════════════════════════════════════════════════════════════════════════════
+
+Setiap comment akan mendapat:
+  ✓ pred_label: 0 (Non-Spam) atau 1 (Spam)
+  ✓ pred_confidence: 0.0 - 1.0 (confidence score)
+  ✓ spam_score: 0.0 - 1.0 (probability of being spam)
+  ✓ label: "Spam" atau "Non-Spam" (human readable)
+
+Contoh:
+  Comment: "subscribe channel kami gratis"
+  → Label: Spam
+  → Confidence: 0.8234 (82.34%)
+  → Spam Score: 0.8234
+
+═════════════════════════════════════════════════════════════════════════════
+
+✅ FIXES YANG SUDAH DITERAPKAN
+═════════════════════════════════════════════════════════════════════════════
+
+❌ Error: 'replyCount' KeyError
+✅ Fixed: Safe field access dengan .get() method
+  • Setiap field optional now memiliki default value
+  • Tidak crash lagi jika field missing
+
+═════════════════════════════════════════════════════════════════════════════
+
+⚠️ LIMITATIONS & NOTES
+═════════════════════════════════════════════════════════════════════════════
+
+YouTube API Rate Limits:
+  • Free tier: 10,000 units per day
+  • Fetch comments: ~1 unit per comment
+  • Meaning: ~10,000 comments per hari
+
+Comment Types:
+  • Top-level comments: ✓ Supported
+  • Replies: ✗ Not included (sekarang)
+
+Language:
+  • Model trained untuk bahasa Indonesia/English
+  • Akurat terbaik untuk YouTube comments dalam bahasa tsb
+
+Privacy:
+  • Tidak ada data yang di-upload ke cloud
+  • Hanya API key yang dikirim ke YouTube
+  • Processing semua lokal
+
+═════════════════════════════════════════════════════════════════════════════
+
+🎯 WORKFLOW EXAMPLE
+═════════════════════════════════════════════════════════════════════════════
+
+Skenario: Cek spam di video musik populer
+
+1. Run app:
+   python -m streamlit run streamlit_app_youtube.py
+
+2. Di browser:
+   • Mode: "🎬 Fetch YouTube Comments"
+   • Paste: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+   • Max comments: 100
+   • Click "Fetch Comments"
+
+3. Tunggu sebentar (fetch & predict ~1-2 min)
+
+4. Lihat results:
+   • Table dengan semua comments + predictions
+   • Lihat statistics (X% spam, Y% non-spam)
+   • Download CSV untuk further analysis
+
+5. Gunakan insights:
+   • Filter spam comments
+   • Take action on spam
+   • Monitor trends
+
+═════════════════════════════════════════════════════════════════════════════
+
+📞 TROUBLESHOOTING
+═════════════════════════════════════════════════════════════════════════════
+
+❌ Error: "Invalid API key"
+✓ Fix: Check API key correct, set via env var
+
+❌ Error: "Video not found"
+✓ Fix: Check VIDEO_ID correct format
+
+❌ Error: "Quota exceeded"
+✓ Fix: Limit comments atau tunggu next day
+
+❌ App sangat slow
+✓ Fix: Reduce max comments (jalankan 10-50 dulu)
+
+❌ Comments not appearing
+✓ Fix: Video mungkin disable comments, coba video lain
+
+═════════════════════════════════════════════════════════════════════════════
+
+📚 NEXT STEPS
+═════════════════════════════════════════════════════════════════════════════
+
+1. Setup API key (lingat di atas)
+2. Run app: python -m streamlit run streamlit_app_youtube.py
+3. Fetch YouTube video comments
+4. Review predictions
+5. Download results untuk further analysis
+
+═════════════════════════════════════════════════════════════════════════════
+
+ENJOY! 🎬✨

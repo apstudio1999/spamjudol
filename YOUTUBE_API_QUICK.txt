@@ -1,0 +1,186 @@
+📋 YOUTUBE API - QUICK COMMANDS
+═════════════════════════════════════════════════════════════════════════════
+
+JALANKAN APP
+
+Desktop (Easiest):
+  → Double-click: run_youtube_api.bat
+
+Terminal (PowerShell):
+  → python -m streamlit run streamlit_app_youtube.py
+
+Terminal with API Key (PowerShell):
+  → $env:YOUTUBE_API_KEY = "AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A"
+  → python -m streamlit run streamlit_app_youtube.py
+
+Terminal with API Key (Command Prompt):
+  → set YOUTUBE_API_KEY=AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A
+  → python -m streamlit run streamlit_app_youtube.py
+
+═════════════════════════════════════════════════════════════════════════════
+
+YOUTUBE URL FORMAT
+
+Full URL:
+  https://www.youtube.com/watch?v=VIDEO_ID
+
+Short URL:
+  https://youtu.be/VIDEO_ID
+
+Extract VIDEO_ID:
+  Anything after "v=" or last "/" in URL
+
+Example:
+  https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  → VIDEO_ID = dQw4w9WgXcQ
+
+═════════════════════════════════════════════════════════════════════════════
+
+API KEY SETUP
+
+Your Key:
+  AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A
+
+Set via PowerShell:
+  $env:YOUTUBE_API_KEY = "AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A"
+
+Set via Command Prompt:
+  set YOUTUBE_API_KEY=AIzaSyA34RxT4RvZmEDHNygacYLTldskgJe_Y3A
+
+Set via .bat file:
+  Edit: run_youtube_api.bat
+  Uncomment: set YOUTUBE_API_KEY=...
+
+═════════════════════════════════════════════════════════════════════════════
+
+APP MODES
+
+1. 🎬 Fetch YouTube Comments
+   • Paste video URL
+   • Set max comments (1-1000)
+   • Click "Fetch & Predict"
+   • Get results with predictions
+
+2. 📊 Batch Upload
+   • Upload CSV file
+   • Click "Predict All"
+   • Download predictions
+
+3. 📈 Statistics
+   • View model performance
+   • See metrics & charts
+   • Baseline comparison
+
+═════════════════════════════════════════════════════════════════════════════
+
+FEATURES SUMMARY
+
+✓ Fetch YouTube comments via API
+✓ Auto predict spam (Spam/Non-Spam)
+✓ Confidence scores
+✓ Batch CSV support
+✓ Download results
+✓ Statistics & visualization
+✓ Error-proof (handles missing fields)
+✓ Fast processing
+
+═════════════════════════════════════════════════════════════════════════════
+
+EXAMPLE WORKFLOW
+
+1. Start app:
+   python -m streamlit run streamlit_app_youtube.py
+
+2. Browser opens: http://localhost:8501
+
+3. Select mode: "🎬 Fetch YouTube Comments"
+
+4. Paste video:
+   https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+5. Set comments: 100
+
+6. Click: "🔍 Fetch & Predict"
+
+7. Wait: 20-30 seconds
+
+8. Review: Results with predictions
+
+9. Download: CSV file
+
+═════════════════════════════════════════════════════════════════════════════
+
+PREDICTIONS OUTPUT
+
+For each comment:
+  ✓ comment_text
+  ✓ author
+  ✓ likes
+  ✓ reply_count
+  ✓ published_at
+  ✓ pred_label (0=Non-Spam, 1=Spam)
+  ✓ pred_confidence (0.0 - 1.0)
+  ✓ spam_score (0.0 - 1.0)
+  ✓ label ("Spam" or "Non-Spam")
+
+═════════════════════════════════════════════════════════════════════════════
+
+LIMITS & CONSTRAINTS
+
+YouTube API:
+  • Free tier: 10,000 units/day
+  • ~1 unit per comment
+  • Max ~10,000 comments/day
+
+Comments Available:
+  • Top-level comments only
+  • No replies included
+  • Video must enable comments
+  • Public videos only
+
+Processing:
+  • 50 comments: ~15 sec
+  • 100 comments: ~30 sec
+  • 500 comments: ~2-3 min
+
+═════════════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+
+"Invalid API key"
+  → Check key is correct
+  → Ensure env var is set
+  → Try restart app
+
+"Video not found"
+  → Check URL format
+  → Verify video exists & is public
+  → Check VIDEO_ID is correct
+
+"Comments disabled"
+  → Try different video
+  → Video owner disabled comments
+
+"App slow"
+  → Reduce max comments
+  → Check internet speed
+  → Reduce other app usage
+
+═════════════════════════════════════════════════════════════════════════════
+
+FILES
+
+Run:
+  run_youtube_api.bat
+
+App:
+  streamlit_app_youtube.py
+
+Docs:
+  YOUTUBE_QUICKSTART.md
+  YOUTUBE_API_USAGE.txt
+  YOUTUBE_API_COMPLETE.txt
+
+═════════════════════════════════════════════════════════════════════════════
+
+THAT'S IT! Enjoy! 🎬✨

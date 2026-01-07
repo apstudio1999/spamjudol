@@ -1,0 +1,194 @@
+[
+  {
+    "index": 0,
+    "original": "Bro visit web judi ‘JUDAY88’ menang terus sumpah bray tanpa ribet coeg! 🤣🤣",
+    "clean": "bro visit web judi juday menang terus sumpah bray tanpa ribet coeg",
+    "tokens": [
+      "bro",
+      "visit",
+      "web",
+      "judi",
+      "juday",
+      "menang",
+      "terus",
+      "sumpah",
+      "bray",
+      "tanpa",
+      "ribet",
+      "coeg"
+    ],
+    "no_stop": "bro visit web judi juday menang terus sumpah bray ribet coeg",
+    "normalized": "bro visit web judi juday menang terus sumpah bray ribet coeg",
+    "stemmed": "bro visit web judi juday menang terus sumpah bray ribet coeg"
+  },
+  {
+    "index": 1,
+    "original": "Kalo mau menang slot coba ke 'slotcepet.xyz' gacor parah coeg langsung gaskeun! 😂",
+    "clean": "kalo mau menang slot coba ke slotcepet xyz gacor parah coeg langsung gaskeun",
+    "tokens": [
+      "kalo",
+      "mau",
+      "menang",
+      "slot",
+      "coba",
+      "ke",
+      "slotcepet",
+      "xyz",
+      "gacor",
+      "parah",
+      "coeg",
+      "langsung",
+      "gaskeun"
+    ],
+    "no_stop": "kalo mau menang slot coba slotcepet xyz gacor parah coeg langsung gaskeun",
+    "normalized": "kalo mau menang slot coba slotcepet xyz gacor parah coeg langsung gaskeun",
+    "stemmed": "kalo mau menang slot coba slotcepet xyz gacor parah coeg langsung gaskeun"
+  },
+  {
+    "index": 2,
+    "original": "Wuih editingnya halus banget, respect! bray",
+    "clean": "wuih editingnya halus banget respect bray",
+    "tokens": [
+      "wuih",
+      "editingnya",
+      "halus",
+      "banget",
+      "respect",
+      "bray"
+    ],
+    "no_stop": "wuih editingnya halus banget respect bray",
+    "normalized": "wuih editingnya halus banget respect bray",
+    "stemmed": "wuih editingnya halus banget respect bray"
+  },
+  {
+    "index": 3,
+    "original": "gampang menang di cuanmaniazz.site gaskeun cmn buruan daftar!!!",
+    "clean": "gampang menang di cuanmaniazz site gaskeun cmn buruan daftar",
+    "tokens": [
+      "gampang",
+      "menang",
+      "di",
+      "cuanmaniazz",
+      "site",
+      "gaskeun",
+      "cmn",
+      "buruan",
+      "daftar"
+    ],
+    "no_stop": "gampang menang cuanmaniazz site gaskeun cmn buruan daftar",
+    "normalized": "gampang menang cuanmaniazz site gaskeun cmn buruan daftar",
+    "stemmed": "gampang menang cuanmaniazz site gaskeun cmn buru daftar"
+  },
+  {
+    "index": 4,
+    "original": "thanks bang udah bikin konten sekeren ini fix 😭!!",
+    "clean": "thanks bang udah bikin konten sekeren ini fix",
+    "tokens": [
+      "thanks",
+      "bang",
+      "udah",
+      "bikin",
+      "konten",
+      "sekeren",
+      "ini",
+      "fix"
+    ],
+    "no_stop": "thanks bang udah bikin konten sekeren fix",
+    "normalized": "thanks bang udah bikin konten sekeren fix",
+    "stemmed": "thanks bang udah bikin konten keren fix"
+  },
+  {
+    "index": 5,
+    "original": "slotbarbar.fun lagi bagi bonus gila parah gasken modal receh bisa WD!! 😭!!",
+    "clean": "slotbarbar fun lagi bagi bonus gila parah gasken modal receh bisa wd",
+    "tokens": [
+      "slotbarbar",
+      "fun",
+      "lagi",
+      "bagi",
+      "bonus",
+      "gila",
+      "parah",
+      "gasken",
+      "modal",
+      "receh",
+      "bisa",
+      "wd"
+    ],
+    "no_stop": "slotbarbar fun bagi bonus gila parah gasken modal receh wd",
+    "normalized": "slotbarbar fun bagi bonus gila parah gasken modal receh wd",
+    "stemmed": "slotbarbar fun bagi bonus gila parah gasken modal receh wd"
+  },
+  {
+    "index": 6,
+    "original": "spinbosszz.live gacor terus asli fix modal receh bisa WD!! 😂!",
+    "clean": "spinbosszz live gacor terus asli fix modal receh bisa wd",
+    "tokens": [
+      "spinbosszz",
+      "live",
+      "gacor",
+      "terus",
+      "asli",
+      "fix",
+      "modal",
+      "receh",
+      "bisa",
+      "wd"
+    ],
+    "no_stop": "spinbosszz live gacor terus asli fix modal receh wd",
+    "normalized": "spinbosszz live gacor terus asli fix modal receh wd",
+    "stemmed": "spinbosszz live gacor terus asli fix modal receh wd"
+  },
+  {
+    "index": 7,
+    "original": "spinbosszz.live gacor terus asli cuan gacor bgt sumpah! 🔥",
+    "clean": "spinbosszz live gacor terus asli cuan gacor bgt sumpah",
+    "tokens": [
+      "spinbosszz",
+      "live",
+      "gacor",
+      "terus",
+      "asli",
+      "cuan",
+      "gacor",
+      "bgt",
+      "sumpah"
+    ],
+    "no_stop": "spinbosszz live gacor terus asli cuan gacor bgt sumpah",
+    "normalized": "spinbosszz live gacor terus asli cuan gacor bgt sumpah",
+    "stemmed": "spinbosszz live gacor terus asli cuan gacor bgt sumpah"
+  },
+  {
+    "index": 8,
+    "original": "Sumpah relatable banget wkwk cuan",
+    "clean": "sumpah relatable banget wkwk cuan",
+    "tokens": [
+      "sumpah",
+      "relatable",
+      "banget",
+      "wkwk",
+      "cuan"
+    ],
+    "no_stop": "sumpah relatable banget wkwk cuan",
+    "normalized": "sumpah relatable banget wkwk cuan",
+    "stemmed": "sumpah relatable banget wkwk cuan"
+  },
+  {
+    "index": 9,
+    "original": "anjir ini lucu banget fix ngakak parah sih",
+    "clean": "anjir ini lucu banget fix ngakak parah sih",
+    "tokens": [
+      "anjir",
+      "ini",
+      "lucu",
+      "banget",
+      "fix",
+      "ngakak",
+      "parah",
+      "sih"
+    ],
+    "no_stop": "anjir lucu banget fix ngakak parah sih",
+    "normalized": "anjir lucu banget fix ngakak parah sih",
+    "stemmed": "anjir lucu banget fix ngakak parah sih"
+  }
+]

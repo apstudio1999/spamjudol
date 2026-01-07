@@ -1,0 +1,35 @@
+🔧 FIX: Error 'replyCount' - SOLVED
+═════════════════════════════════════════════════════════════════════════════
+
+MASALAH:
+  KeyError: 'replyCount'
+  Beberapa comments dari YouTube API tidak punya field replyCount
+
+PENYEBAB:
+  YouTube API response structure berbeda untuk beberapa comment types
+  Beberapa field optional dan tidak selalu present
+
+SOLUSI YANG DITERAPKAN:
+  ✓ Ubah akses field dari comment['field'] → comment.get('field', default)
+  ✓ Handle missing fields dengan safe access
+  ✓ Set default values untuk missing data
+
+PERUBAHAN KODE:
+  Sebelum:
+    'reply_count': comment['replyCount']  ← Crash jika field missing!
+    
+  Sesudah:
+    'reply_count': item['snippet'].get('replyCount', 0)  ← Safe!
+
+FIELDS YANG DI-FIX:
+  ✓ textDisplay → .get('textDisplay', '')
+  ✓ authorDisplayName → .get('authorDisplayName', 'Unknown')
+  ✓ likeCount → .get('likeCount', 0)
+  ✓ replyCount → item['snippet'].get('replyCount', 0)
+  ✓ publishedAt → .get('publishedAt', '')
+
+STATUS: ✅ FIXED
+
+Sekarang bisa menggunakan YouTube API tanpa error!
+
+═════════════════════════════════════════════════════════════════════════════

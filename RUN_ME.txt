@@ -1,0 +1,42 @@
+🚀 GETTING STARTED IN 3 COMMANDS
+════════════════════════════════════════════════════════════════════════
+
+Copy-paste these 3 commands ke PowerShell/Command Prompt:
+
+1️⃣  cd d:\Projek\web\spam_detector
+
+2️⃣  python setup_local.py
+
+3️⃣  streamlit run streamlit_app_local.py
+
+
+Wait for browser to open, paste text, click Predict, DONE! ✨
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+
+❌ "python: command not found"
+→ Python not in PATH. Use: py setup_local.py
+
+❌ "ModuleNotFoundError"
+→ Run setup_local.py again, wait for completion
+
+❌ "gnn_spam_model.pt not found"
+→ Download from Colab, copy to this folder
+
+❌ "Port 8501 already in use"
+→ Kill existing streamlit, or use port 8502:
+   streamlit run streamlit_app_local.py --server.port 8502
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+MORE INFO
+
+📚 Read QUICKSTART.md for more details
+📚 Read README.md for complete documentation
+📚 Read INTEGRATION_GUIDE.md for Python API examples
+
+═══════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,5 @@
+{
+  "method": "similarity_knn",
+  "num_nodes": 5000,
+  "num_edges": 25000
+}

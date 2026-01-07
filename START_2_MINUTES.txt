@@ -1,0 +1,150 @@
+🎯 MULAI DALAM 2 MENIT
+═════════════════════════════════════════════════════════════════════════════
+
+Pilih salah satu cara:
+
+---
+
+CARA 1: DOUBLE-CLICK (Paling Mudah!)
+═════════════════════════════════════════════════════════════════════════════
+
+1. Buka File Explorer
+   Windows Key + E
+
+2. Navigate ke folder:
+   d:\Projek\web\spam_detector
+
+3. Cari file: run_streamlit.bat
+   
+4. DOUBLE-CLICK run_streamlit.bat
+
+5. Tunggu 3-5 detik
+
+6. Browser otomatis terbuka
+
+7. SELESAI! Gunakan app! ✨
+
+---
+
+CARA 2: TERMINAL
+═════════════════════════════════════════════════════════════════════════════
+
+1. Buka PowerShell:
+   Windows Key + R
+   Type: powershell
+   Press Enter
+
+2. Navigate ke folder:
+   cd d:\Projek\web\spam_detector
+
+3. Jalankan:
+   python -m streamlit run streamlit_app_local.py
+
+4. Tunggu sampai output:
+   "You can now view your Streamlit app in your browser at: http://localhost:8501"
+
+5. Buka browser:
+   http://localhost:8501
+
+6. SELESAI! Gunakan app! ✨
+
+---
+
+MENGGUNAKAN APP
+═════════════════════════════════════════════════════════════════════════════
+
+Di browser (http://localhost:8501):
+
+SINGLE PREDICTION:
+  1. Pilih mode: "📝 Single Prediction"
+  2. Paste text di text area
+  3. Click "🔍 Predict"
+  4. Lihat hasil!
+
+BATCH PREDICTION:
+  1. Pilih mode: "📊 Batch Upload"
+  2. Upload CSV file (dengan kolom comment_text atau text)
+  3. Click "🔍 Predict All"
+  4. Download predictions.csv
+
+STATISTICS:
+  1. Pilih mode: "📈 Statistics"
+  2. Lihat model info & performance
+  3. Lihat perbandingan dengan baseline models
+
+---
+
+CONTOH TEXT UNTUK DICOBA
+═════════════════════════════════════════════════════════════════════════════
+
+Spam examples:
+  • "subscribe my channel gratis"
+  • "klik link ini untuk hadiah"
+  • "jangan lupa subscribe!!!!"
+
+Non-spam examples:
+  • "video ini sangat informatif"
+  • "terima kasih atas penjelasannya"
+  • "konten yang bagus, keep it up"
+
+---
+
+TROUBLESHOOTING
+═════════════════════════════════════════════════════════════════════════════
+
+❌ Browser tidak terbuka:
+   Buka manual: http://localhost:8501
+
+❌ "Port already in use":
+   Gunakan port lain: python -m streamlit run streamlit_app_local.py --server.port 8502
+
+❌ "Model not found":
+   Pastikan file gnn_spam_model.pt ada di folder
+
+❌ App crash:
+   Check internet, restart terminal, try again
+
+---
+
+STOP APP
+═════════════════════════════════════════════════════════════════════════════
+
+Di Terminal:
+  Press: Ctrl + C
+
+Browser:
+  Just close tab (doesn't stop server though)
+
+---
+
+TIPS
+═════════════════════════════════════════════════════════════════════════════
+
+💡 Batch mode lebih cepat
+   Upload CSV dengan 100 komentar instead of 100x single predictions
+
+💡 Save hasil
+   Download CSV dari app untuk backup
+
+💡 Multiple tabs
+   Bisa buka multiple browser tabs
+   Run prediction di tab berbeda simultaneously
+
+💡 Persistence
+   Model tersimpan lokal selamanya
+   Bisa digunakan offline (after setup)
+
+---
+
+NEXT: Baca dokumentasi
+═════════════════════════════════════════════════════════════════════════════
+
+Untuk info lebih detail:
+  • SUPER_QUICK_START.md
+  • README.md
+  • QUICK_REFERENCE.txt
+  • INTEGRATION_GUIDE.md
+
+---
+
+THAT'S IT! ENJOY! 🚀
