@@ -222,7 +222,7 @@ st.markdown("Masukkan link YouTube atau unggah CSV komentar. Sistem akan mempros
 
 # Sidebar: paths & options
 st.sidebar.header("Settings & Paths")
-project_path = st.sidebar.text_input("Project path (Drive)", PROJECT_PATH_DEFAULT)
+project_path = st.sidebar.text_input("Project path (Drive)", PROJECT_PATH)
 tfidf_path = os.path.join(project_path, TFIDF_FILENAME)
 model_path = os.path.join(project_path, MODEL_FILENAME)
 
