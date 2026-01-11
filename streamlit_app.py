@@ -329,11 +329,25 @@ if df_comments is not None and len(df_comments) > 0:
 
     df_comments["pred_label"] = preds[:len(df_comments)]
     df_comments["spam_score"] = probs[:len(df_comments)]
+    
+    # Add kategori column
+    df_comments["Kategori"] = df_comments["pred_label"].apply(lambda x: "Spam" if x == 1 else "Non-Spam")
 
-    # display top table
+    # Prolog - Summary sebelum tabel
     st.subheader("Hasil Deteksi — Tabel Komentar")
+    spam_count = (df_comments["pred_label"] == 1).sum()
+    non_spam_count = (df_comments["pred_label"] == 0).sum()
+    total_count = len(df_comments)
+    
+    st.markdown(f"""
+    **Ringkasan Hasil Analisis:**
+    - Total Komentar: **{total_count}**
+    - Spam: **{spam_count}** ({spam_count/total_count*100:.1f}%)
+    - Non-Spam: **{non_spam_count}** ({non_spam_count/total_count*100:.1f}%)
+    """)
+    
     st.write("Urut berdasarkan spam_score tertinggi")
-    st.dataframe(df_comments[["comment_text", "clean_text", "pred_label", "spam_score"]].sort_values("spam_score", ascending=False).reset_index(drop=True), height=300)
+    st.dataframe(df_comments[["comment_text", "Kategori", "spam_score"]].sort_values("spam_score", ascending=False).reset_index(drop=True), height=300)
 
     # summary bar chart
     st.subheader("Ringkasan Jumlah Spam vs Non-Spam")
